@@ -4,7 +4,7 @@ export function formatPrice(price) {
   }
 
   if (price.amount < 0) {
-    return `-${price.currency}${parseFloat(Math.abs(price.amount))}`;
+    return `-${price.currency}${parseFloat(Math.abs(price.amount)).toFixed(2)}`;
   }
-  return `${price.currency}${parseFloat(price.amount)}`;
+  return `${price.currency}${parseFloat(price.amount).toFixed(2)}`;
 }
