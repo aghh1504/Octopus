@@ -1,9 +1,17 @@
 import React from "react";
 
-import { formatPrice } from "../../../utils/price-formatter";
-import { Section } from "../../styles";
+import { formatPrice } from "utils/price-formatter";
+import { Section } from "components/styles";
 
-import { PriceWrapper, Price, Counter, Button } from "./styles.jsx";
+import {
+  PriceWrapper,
+  Price,
+  Counter,
+  Button,
+  Quantity,
+  QuantityButton,
+  QuantityNb
+} from "./styles.jsx";
 
 export default function CardPrice({ price, quantity, addItem, removeItem }) {
   return (
@@ -11,10 +19,10 @@ export default function CardPrice({ price, quantity, addItem, removeItem }) {
       <PriceWrapper>
         <Price>{formatPrice(price)}</Price>
         <Counter>
-          <div className="qty">QTY</div>
-          <button>-</button>
-          <span>1</span>
-          <button>+</button>
+          <Quantity>QTY</Quantity>
+          <QuantityButton>-</QuantityButton>
+          <QuantityNb>1</QuantityNb>
+          <QuantityButton>+</QuantityButton>
         </Counter>
       </PriceWrapper>
       <Button>Add to cart</Button>

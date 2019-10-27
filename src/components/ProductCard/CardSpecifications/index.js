@@ -3,7 +3,7 @@ import React from "react";
 import ExpandableText from "../../ExpandableText";
 import { Section, SecondaryHeading } from "../../styles";
 
-import { Table, Row } from "./styles.jsx";
+import { Table, Cell } from "./styles.jsx";
 
 export default function CardSpecifications({
   specifications: {
@@ -22,34 +22,34 @@ export default function CardSpecifications({
       <ExpandableText lineHeigth={16}>
         <Table>
           <tbody>
-            <Row>
-              <td>Brand</td>
-              <td>{brand}</td>
-            </Row>
-            <Row>
-              <td>Item weight</td>
-              <td>{weight}</td>
-            </Row>
-            <Row>
-              <td>Dimensions</td>
-              <td>{dimensions}</td>
-            </Row>
-            <Row>
-              <td>Item model number</td>
-              <td>{model_number}</td>
-            </Row>
-            <Row>
-              <td>Colour</td>
-              <td>{colour}</td>
-            </Row>
-            <Row>
-              <td>Type</td>
-              <td>{type}</td>
-            </Row>
-            <Row>
-              <td>Socket</td>
-              <td>{socket}</td>
-            </Row>
+            <tr>
+              <Cell>Brand</Cell>
+              <Cell>{brand}</Cell>
+            </tr>
+            <tr>
+              <Cell>Item weight</Cell>
+              <Cell>{weight}</Cell>
+            </tr>
+            <tr>
+              <Cell>Dimensions</Cell>
+              <Cell>{dimensions}</Cell>
+            </tr>
+            <tr>
+              <Cell>Item model number</Cell>
+              <Cell>{model_number}</Cell>
+            </tr>
+            <tr>
+              <Cell>Colour</Cell>
+              <Cell>{colour}</Cell>
+            </tr>
+            <tr>
+              <Cell>Type</Cell>
+              <Cell>{type}</Cell>
+            </tr>
+            <tr>
+              <Cell>Socket</Cell>
+              <Cell>{socket}</Cell>
+            </tr>
           </tbody>
         </Table>
       </ExpandableText>

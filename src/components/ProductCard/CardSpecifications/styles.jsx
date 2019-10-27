@@ -5,10 +5,8 @@ export const Table = styled.table`
   border-collapse: collapse;
 `;
 
-export const Row = styled.tr`
-  td {
-    border-bottom: 3pt solid #011739;
-    padding: 10px 0;
-    font-size: 17px;
-  }
+export const Cell = styled.td`
+  border-bottom: 3pt solid #011739;
+  padding: 10px 0;
+  font-size: 17px;
 `;

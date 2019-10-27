@@ -16,30 +16,31 @@ export const Counter = styled.div`
   display: inherit;
   align-items: inherit;
   position: relative;
+`;
 
-  .qty {
-    position: absolute;
-    top: -20px;
-    width: 100%;
-    text-align: center;
-    content: "";
-    display: inline-block;
-    color: #617ba5;
-    font-weight: bold;
-  }
+export const QuantityNb = styled.span`
+  padding: 0 20px;
+  font-size: 30px;
+`;
 
-  span {
-    padding: 0 20px;
-    font-size: 30px;
-  }
-  button {
-    color: #fff;
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 5px;
-    background: #284b86;
-  }
+export const QuantityButton = styled.button`
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background: #284b86;
+`;
+
+export const Quantity = styled.div`
+  position: absolute;
+  top: -20px;
+  width: 100%;
+  text-align: center;
+  content: "";
+  display: inline-block;
+  color: #617ba5;
+  font-weight: bold;
 `;
 
 export const Button = styled.button`
