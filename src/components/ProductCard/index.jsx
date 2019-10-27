@@ -25,8 +25,8 @@ export default function ProductCard({
           max_quantity,
           description,
           specifications,
-          max,
-          min,
+          performance_first,
+          performance_second,
           id
         }) => (
           <React.Fragment key={id}>
@@ -40,7 +40,10 @@ export default function ProductCard({
             />
             <CardDescription description={description} />
             <CardSpecifications specifications={specifications} />
-            <CardPerformance max={max} min={min} />
+            <CardPerformance
+              performanceSecond={performance_second}
+              performanceFirst={performance_first}
+            />
           </React.Fragment>
         )
       )

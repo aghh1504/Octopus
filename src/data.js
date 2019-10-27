@@ -23,7 +23,7 @@ export const products = [
       type: "LED",
       socket: "B22/E27"
     },
-    min: 10,
-    max: 60
+    performance_first: [],
+    performance_second: []
   }
 ];

@@ -22,8 +22,8 @@ const Product = Record(
       type: "",
       socket: ""
     },
-    min_rate: 0,
-    max_rate: 0
+    performance_first: [],
+    performance_second: []
   },
   "ProductRecord"
 );
