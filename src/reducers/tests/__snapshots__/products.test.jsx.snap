@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Products Reducer should store the products into state on the right event 1`] = `
+Immutable.Map {
+  undefined: Immutable.ProductRecord {
+    "id": null,
+    "title": "",
+    "image": Object {
+      "heigth": 0,
+      "url": "",
+      "width": 0,
+    },
+    "details": "",
+    "price": Object {
+      "amount": 0,
+      "currency": "",
+    },
+    "max_quantity": 0,
+    "description": "",
+    "specifications": Object {
+      "brand": "",
+      "colour": "",
+      "dimensions": "",
+      "model_number": "",
+      "socket": "",
+      "type": "",
+      "weight": "",
+    },
+    "performance_first": Array [],
+    "performance_second": Array [],
+  },
+}
+`;
