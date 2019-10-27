@@ -10,17 +10,14 @@ import Footer from "../../components/Footer";
 import ProductCard from "../../components/ProductCard";
 import { GlobalStyle } from "./styles";
 
-//remove later
-import { products } from "../../data";
-
 class App extends React.Component {
   componentDidMount() {
     this.props.dispatchFetchProductsRequest();
   }
   render() {
-    console.log("products", products);
+    console.log("products", this.props.products);
 
-    const { dispatchAddItem, dispatchRemoveItem } = this.props;
+    const { dispatchAddItem, dispatchRemoveItem, products } = this.props;
 
     return (
       <main>

@@ -13,7 +13,7 @@ export const products = [
     price: { amount: 12.99, currency: "£" },
     max_quantity: 10,
     description:
-      "Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches on instantly, no wiaint around warm start and flicker free features. Compatible with the Plumen Pendant. Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches on instantly, no wiaint around warm start and flicker free features. Compatible with the Plumen Pendant. Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches on instantly, no wiaint around warm start and flicker free features. Compatible with the Plumen Pendant. Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches on instantly, no wiaint around warm start and flicker free features. Compatible with the Plumen Pendant.",
+      "Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches on instantly, no wiaint around warm start and flicker free features. Compatible with the Plumen Pendant. Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches on instantly, no wiaint around warm start and flicker free features. Compatible with the Plumen Pendant.",
     specifications: {
       brand: "Philips",
       weight: "77g",

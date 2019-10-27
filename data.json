@@ -1,22 +1,28 @@
 {
   "products": [
     {
-      "id": 1,
-      "imageUrl": "https://unsplash.com/@ankit_manoharan?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge",
-      "name": "Energy saving light bulb",
-      "details_info": "25W // Packet of 4",
+      "id": "1",
+      "image": {
+        "url": "https://images.pexels.com/photos/45227/bulb-electricity-energy-glass-45227.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+        "heigth": 510,
+        "width": 435
+      },
+      "title": "Energy saving light bulb",
+      "details": "25W // Packet of 4",
       "price": { "amount": 12.99, "currency": "£" },
-      "quantity": 10,
-      "description": "Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches on instantly, no wiaint around warm start and flicker free features. Compatible with the Plumen Pendant.",
-      "brand": "Philips",
-      "weight": "77g",
-      "dimensions": "12.6x6.2x6.2cm",
-      "model_number": "E27 ES",
-      "colour": "Cool daylight",
-      "type": "LED",
-      "socket": "B22/E27",
-      "min_rate": 10,
-      "max_rate": 60
+      "max_quantity": 10,
+      "description": "Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches on instantly, no wiaint around warm start and flicker free features. Compatible with the Plumen Pendant. Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches on instantly, no wiaint around warm start and flicker free features. Compatible with the Plumen Pendant.",
+      "specifications": {
+        "brand": "Philips",
+        "weight": "77g",
+        "dimensions": "12.6x6.2x6.2cm",
+        "model_number": "E27 ES",
+        "colour": "Cool daylight",
+        "type": "LED",
+        "socket": "B22/E27"
+      },
+      "min": 10,
+      "max": 60
     }
   ]
 }

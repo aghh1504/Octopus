@@ -9,7 +9,6 @@ export default function CardPerformance({ data }) {
       {
         label: [100, 200, 300, 400, 500],
         backgroundColor: "transparent",
-        borderColor: "#bbb",
         pointBackgroundColor: "#ddd",
         lineTension: 0.1,
         borderColor: "rgba(75,192,192,1)",
@@ -19,7 +18,6 @@ export default function CardPerformance({ data }) {
       {
         label: [100, 200, 300, 400, 500],
         backgroundColor: "transparent",
-        borderColor: "#bbb",
         pointBackgroundColor: "#ddd",
         lineTension: 0.1,
         borderColor: "rgba(33, 65,192,1)",

@@ -3,18 +3,25 @@ import { Record } from "immutable";
 const Product = Record(
   {
     id: null,
-    name: "",
-    details_info: "",
+    title: "",
+    image: {
+      url: "",
+      heigth: 0,
+      width: 0
+    },
+    details: "",
     price: { amount: 0, currency: "" },
     quantity: 0,
     description: "",
-    brand: "",
-    weight: "",
-    dimensions: "",
-    model_number: "",
-    colour: "",
-    type: "",
-    socket: "",
+    specifications: {
+      brand: "",
+      weight: "",
+      dimensions: "",
+      model_number: "",
+      colour: "",
+      type: "",
+      socket: ""
+    },
     min_rate: 0,
     max_rate: 0
   },

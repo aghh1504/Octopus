@@ -21,34 +21,36 @@ export default function CardSpecifications({
       <SecondaryHeading>Specifications</SecondaryHeading>
       <ExpandableText lineHeigth={16}>
         <Table>
-          <Row>
-            <td>Brand</td>
-            <td>{brand}</td>
-          </Row>
-          <Row>
-            <td>Item weight</td>
-            <td>{weight}</td>
-          </Row>
-          <Row>
-            <td>Dimensions</td>
-            <td>{dimensions}</td>
-          </Row>
-          <Row>
-            <td>Item model number</td>
-            <td>{model_number}</td>
-          </Row>
-          <Row>
-            <td>Colour</td>
-            <td>{colour}</td>
-          </Row>
-          <Row>
-            <td>Type</td>
-            <td>{type}</td>
-          </Row>
-          <Row>
-            <td>Socket</td>
-            <td>{socket}</td>
-          </Row>
+          <tbody>
+            <Row>
+              <td>Brand</td>
+              <td>{brand}</td>
+            </Row>
+            <Row>
+              <td>Item weight</td>
+              <td>{weight}</td>
+            </Row>
+            <Row>
+              <td>Dimensions</td>
+              <td>{dimensions}</td>
+            </Row>
+            <Row>
+              <td>Item model number</td>
+              <td>{model_number}</td>
+            </Row>
+            <Row>
+              <td>Colour</td>
+              <td>{colour}</td>
+            </Row>
+            <Row>
+              <td>Type</td>
+              <td>{type}</td>
+            </Row>
+            <Row>
+              <td>Socket</td>
+              <td>{socket}</td>
+            </Row>
+          </tbody>
         </Table>
       </ExpandableText>
     </Section>
