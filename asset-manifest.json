@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/Octopus/static/js/main.c6253bc0.chunk.js",
+    "main.js.map": "/Octopus/static/js/main.c6253bc0.chunk.js.map",
+    "runtime-main.js": "/Octopus/static/js/runtime-main.4246c54d.js",
+    "runtime-main.js.map": "/Octopus/static/js/runtime-main.4246c54d.js.map",
+    "static/js/2.81fa84b0.chunk.js": "/Octopus/static/js/2.81fa84b0.chunk.js",
+    "static/js/2.81fa84b0.chunk.js.map": "/Octopus/static/js/2.81fa84b0.chunk.js.map",
+    "index.html": "/Octopus/index.html",
+    "precache-manifest.78747ac6e08240765f5758785daa30e1.js": "/Octopus/precache-manifest.78747ac6e08240765f5758785daa30e1.js",
+    "service-worker.js": "/Octopus/service-worker.js",
+    "static/media/bulb.jpg": "/Octopus/static/media/bulb.385882e8.jpg",
+    "static/media/octopus_logo.png": "/Octopus/static/media/octopus_logo.224f08b4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4246c54d.js",
+    "static/js/2.81fa84b0.chunk.js",
+    "static/js/main.c6253bc0.chunk.js"
+  ]
+}
