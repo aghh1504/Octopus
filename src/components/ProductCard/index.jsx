@@ -6,12 +6,7 @@ import CardDescription from "./CardDescription";
 import CardSpecifications from "./CardSpecifications";
 import CardPerformance from "./CardPerformance";
 
-export default function ProductCard({
-  products,
-  addItem,
-  removeItem,
-  quantity
-}) {
+export default function ProductCard({ products, postOrder, orderStatus }) {
   return (
     products.size > 0 &&
     products
@@ -33,10 +28,10 @@ export default function ProductCard({
             <CardHeader image={image} title={title} details={details} />
             <CardPrice
               price={price}
-              quantity={quantity}
               maxQuantity={max_quantity}
-              addItem={addItem}
-              removeItem={removeItem}
+              postOrder={postOrder}
+              id={id}
+              orderStatus={orderStatus}
             />
             <CardDescription description={description} />
             <CardSpecifications specifications={specifications} />

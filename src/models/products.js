@@ -11,7 +11,7 @@ const Product = Record(
     },
     details: "",
     price: { amount: 0, currency: "" },
-    quantity: 0,
+    max_quantity: 0,
     description: "",
     specifications: {
       brand: "",

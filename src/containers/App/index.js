@@ -1,13 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { fetchProductsRequest } from "../../actions/products";
-import { addItem, removeItem } from "../../actions/order";
-import { getProducts } from "../../selectors/products";
+import { fetchProductsRequest } from "actions/products";
+import { postOrder } from "actions/order";
+import { getProducts } from "selectors/products";
+import { getOrderStatus } from "selectors/order";
 
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import ProductCard from "../../components/ProductCard";
+import Header from "components/Header";
+import Footer from "components/Footer";
+import ProductCard from "components/ProductCard";
 import { GlobalStyle } from "./styles";
 
 class App extends React.Component {
@@ -15,9 +16,7 @@ class App extends React.Component {
     this.props.dispatchFetchProductsRequest();
   }
   render() {
-    console.log("products", this.props.products);
-
-    const { dispatchAddItem, dispatchRemoveItem, products } = this.props;
+    const { dispatchPostOrder, products, orderStatus } = this.props;
 
     return (
       <main>
@@ -25,8 +24,8 @@ class App extends React.Component {
         <Header />
         <ProductCard
           products={products}
-          addItem={dispatchAddItem}
-          removeItem={dispatchRemoveItem}
+          postOrder={dispatchPostOrder}
+          orderStatus={orderStatus}
         />
         <Footer />
       </main>
@@ -37,14 +36,14 @@ class App extends React.Component {
 function mapDispatchToProps(dispatch) {
   return {
     dispatchFetchProductsRequest: () => dispatch(fetchProductsRequest()),
-    dispatchAddItem: () => dispatch(addItem()),
-    dispatchRemoveItem: () => dispatch(removeItem())
+    dispatchPostOrder: (id, quantity) => dispatch(postOrder(id, quantity))
   };
 }
 
 function mapStateToProps(state) {
   return {
-    products: getProducts(state)
+    products: getProducts(state),
+    orderStatus: getOrderStatus(state)
   };
 }
 

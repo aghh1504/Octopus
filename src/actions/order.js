@@ -1,9 +1,7 @@
 import {
   SET_ORDER_SUCCESS,
   SET_ORDER_ERROR,
-  POST_ORDER_REQUEST,
-  ADD_ITEM_TO_ORDER,
-  REMOVE_ITEM_FROM_ORDER
+  POST_ORDER_REQUEST
 } from "./types";
 
 export const setOrder = data => ({
@@ -16,17 +14,9 @@ export const setOrderErrors = data => ({
   payload: { data }
 });
 
-export const postOrders = data => ({
+export const postOrder = data => ({
   type: POST_ORDER_REQUEST,
-  payload: { data }
-});
-
-export const addItem = id => ({
-  type: ADD_ITEM_TO_ORDER,
-  payload: { data: id }
-});
-
-export const removeItem = id => ({
-  type: REMOVE_ITEM_FROM_ORDER,
-  payload: { data: id }
+  payload: {
+    data
+  }
 });

@@ -6,12 +6,14 @@ import { BASE_URL } from "../config";
 
 export function* postOrder(action) {
   try {
-    const orders = yield call(
+    const order = yield call(
       post,
       `${BASE_URL}products/addProduct`,
-      action.payload
+      action.payload.data
     );
-    yield put(setOrder(orders));
+    if (order.status === 200) {
+      yield put(setOrder(order.statusText));
+    }
   } catch (e) {
     yield put(setOrderErrors(e.errors));
   }

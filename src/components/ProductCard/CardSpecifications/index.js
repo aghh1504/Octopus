@@ -1,7 +1,7 @@
 import React from "react";
 
-import ExpandableText from "../../ExpandableText";
-import { Section, SecondaryHeading } from "../../styles";
+import ExpandableText from "components/ExpandableText";
+import { Section, SecondaryHeading } from "components/styles";
 
 import { Table, Cell } from "./styles.jsx";
 

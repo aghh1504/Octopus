@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Image, Description, ImageWrapper } from "./styles.jsx";
-import { Section, PrimaryHeading } from "../../styles";
+import { Image, Description, ImageWrapper } from "./styles";
+import { Section, PrimaryHeading } from "components/styles";
 
 export default function CardHeader({ image, title, details }) {
   return (
