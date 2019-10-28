@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { ifProp, ifNotProp, prop } from "styled-tools";
+import styled, { css } from "styled-components";
+import { ifProp, prop } from "styled-tools";
 
 export const StyledLink = styled.a`
   color: #cf0677;
@@ -11,7 +11,14 @@ export const StyledLink = styled.a`
 
 export const Text = styled.div`
   position: relative;
-  max-height: calc(16px * ${prop("lineHeigth")});
-  overflow: ${ifNotProp("visible", "hidden", "visible")};
-  max-height: ${ifProp({ visible: true }, "none")};
+  overflow: ${ifProp("visible", "visible", "hidden")};
+  ${ifProp(
+    { visible: true },
+    css`
+      max-height: none;
+    `,
+    css`
+      max-height: calc(16px * ${prop("lineHeigth")});
+    `
+  )};
 `;

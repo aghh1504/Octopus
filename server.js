@@ -24,7 +24,6 @@ app.get("/products/", function(req, res) {
 });
 
 app.post("/products/addProduct/", function(req, res) {
-  //const newItem = req.body.data;
   res.send("Product added");
 });
 

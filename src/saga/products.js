@@ -7,8 +7,8 @@ import { FETCH_PRODUCTS_REQUEST } from "../actions/types";
 
 export function* fetchProducts() {
   try {
-    const products = yield call(get, `${BASE_URL}products`);
-    yield put(setProductsRequest(products));
+    const response = yield call(get, `${BASE_URL}products`);
+    yield put(setProductsRequest(response.data.products));
   } catch (e) {
     console.log(e);
     yield put(setProductsErrors(e.error));

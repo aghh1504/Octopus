@@ -14,30 +14,33 @@ import {
 } from "./styles";
 
 export default class CardPrice extends React.Component {
-  state = { quantity: 1, buttonText: "Add to cart" };
+  state = { quantity: 1 };
+
+  handleRemoveItem = () => {
+    const { quantity } = this.state;
+    if (quantity > 0) {
+      return this.setState(() => ({ quantity: quantity - 1 }));
+    }
+  };
+
+  handleAddItem = () => {
+    const { quantity } = this.state;
+    const { maxQuantity } = this.props;
+    if (maxQuantity > quantity) {
+      return this.setState(() => ({ quantity: quantity + 1 }));
+    }
+  };
+
+  handleAddOrder = () => {
+    const { postOrder, id } = this.props;
+    postOrder({ id, quantity: this.state.quantity });
+  };
 
   render() {
-    const { price, postOrder, id, maxQuantity, orderStatus } = this.props;
-    const { quantity, buttonText } = this.state;
+    const { price, orderStatus } = this.props;
+    const { quantity } = this.state;
 
-    const handleRemoveItem = () => {
-      const { quantity } = this.state;
-      if (quantity > 0) {
-        return this.setState(() => ({ quantity: quantity - 1 }));
-      }
-    };
-    const handleAddItem = () => {
-      const { quantity } = this.state;
-      if (maxQuantity > quantity) {
-        return this.setState(() => ({ quantity: quantity + 1 }));
-      }
-    };
-    const handleAddOrder = () => {
-      postOrder({ id, quantity: this.state.quantity });
-      if (orderStatus === "OK") {
-        return this.setState(() => ({ buttonText: "Added!" }));
-      }
-    };
+    const buttonText = orderStatus === "OK" ? "Added!" : "Add to cart";
 
     return (
       <Section>
@@ -45,12 +48,12 @@ export default class CardPrice extends React.Component {
           <Price>{formatPrice(price)}</Price>
           <Counter>
             <Quantity>QTY</Quantity>
-            <QuantityButton onClick={handleRemoveItem}>-</QuantityButton>
+            <QuantityButton onClick={this.handleRemoveItem}>-</QuantityButton>
             <QuantityNb>{quantity}</QuantityNb>
-            <QuantityButton onClick={handleAddItem}>+</QuantityButton>
+            <QuantityButton onClick={this.handleAddItem}>+</QuantityButton>
           </Counter>
         </PriceWrapper>
-        <Button onClick={handleAddOrder}>{buttonText}</Button>
+        <Button onClick={this.handleAddOrder}>{buttonText}</Button>
       </Section>
     );
   }

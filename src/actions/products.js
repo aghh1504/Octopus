@@ -1,17 +1,13 @@
-import { normalize, schema } from "normalizr";
-
-import productsSchema from "../schema/products";
-
 import {
   SET_PRODUCTS_REQUEST,
   FETCH_PRODUCTS_REQUEST,
   SET_PRODUCTS_ERROR
 } from "./types";
 
-export const setProductsRequest = data => ({
+export const setProductsRequest = products => ({
   type: SET_PRODUCTS_REQUEST,
   payload: {
-    data: normalize(data.data.products, new schema.Array(productsSchema))
+    data: { products }
   }
 });
 

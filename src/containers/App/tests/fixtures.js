@@ -1,10 +1,8 @@
-import buld from "../src/assets/bulb.jpg";
-
 export const products = [
   {
     id: 1,
     image: {
-      url: buld,
+      url: "/",
       heigth: 510,
       width: 435
     },
