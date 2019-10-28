@@ -22,7 +22,7 @@ describe("<App />", () => {
       <Provider store={store}>
         <App
           products={products}
-          orderStatus="OK"
+          order={{ status: "OK" }}
           dispatchPostOrder={jest.fn()}
         />
       </Provider>

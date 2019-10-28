@@ -1,11 +1,11 @@
 import { combineReducers } from "redux-immutable";
 import products from "./products";
-import orderStatus from "./order";
+import order from "./order";
 
 const rootReducer = combineReducers({
   entities: combineReducers({
     products,
-    order_status: orderStatus
+    order: order
   })
 });
 

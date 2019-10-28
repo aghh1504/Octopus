@@ -2,7 +2,7 @@ import { createSelector } from "../utils/reselect-memoize";
 
 const getEntities = state => state.get("entities");
 
-export const getOrderStatus = createSelector(
+export const getOrder = createSelector(
   [getEntities],
-  entities => entities.get("order_status")
+  entities => entities.get("order")
 );

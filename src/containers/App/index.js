@@ -2,9 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 
 import { fetchProductsRequest } from "actions/products";
-import { postOrder } from "actions/order";
+import { decrementQuantity, incrementQuantity, postOrder } from "actions/order";
 import { getProducts } from "selectors/products";
-import { getOrderStatus } from "selectors/order";
+import { getOrder } from "selectors/order";
 
 import Header from "components/Header";
 import Footer from "components/Footer";
@@ -16,16 +16,25 @@ class App extends React.Component {
     this.props.dispatchFetchProductsRequest();
   }
   render() {
-    const { dispatchPostOrder, products, orderStatus } = this.props;
+    const {
+      dispatchIncrementQuantity,
+      dispatchDecrementQuantity,
+      dispatchPostOrder,
+      products,
+      order
+    } = this.props;
+    const product = products.length > 0 && products.map(product => product);
 
     return (
       <main>
         <GlobalStyle />
         <Header />
         <ProductCard
-          products={products}
+          product={product}
           postOrder={dispatchPostOrder}
-          orderStatus={orderStatus}
+          order={order}
+          incrementQuantity={dispatchIncrementQuantity}
+          decrementQuantity={dispatchDecrementQuantity}
         />
         <Footer />
       </main>
@@ -36,6 +45,8 @@ class App extends React.Component {
 function mapDispatchToProps(dispatch) {
   return {
     dispatchFetchProductsRequest: () => dispatch(fetchProductsRequest()),
+    dispatchIncrementQuantity: () => dispatch(incrementQuantity()),
+    dispatchDecrementQuantity: () => dispatch(decrementQuantity()),
     dispatchPostOrder: (id, quantity) => dispatch(postOrder(id, quantity))
   };
 }
@@ -43,7 +54,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps(state) {
   return {
     products: getProducts(state),
-    orderStatus: getOrderStatus(state)
+    order: getOrder(state)
   };
 }
 

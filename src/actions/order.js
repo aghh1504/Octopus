@@ -1,7 +1,9 @@
 import {
   SET_ORDER_SUCCESS,
   SET_ORDER_ERROR,
-  POST_ORDER_REQUEST
+  POST_ORDER_REQUEST,
+  INCREMENT_QUANTITY,
+  DECREMENT_QUANTITY
 } from "./types";
 
 export const setOrder = data => ({
@@ -20,3 +22,6 @@ export const postOrder = data => ({
     data
   }
 });
+
+export const incrementQuantity = () => ({ type: INCREMENT_QUANTITY });
+export const decrementQuantity = () => ({ type: DECREMENT_QUANTITY });
