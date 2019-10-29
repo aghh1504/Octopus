@@ -1,8 +1,8 @@
 # Octopus
 
-# To run:
+## To run:
 
-yarn
-yarn start
-run server: node server.js
-run test: yarn test
+1. yarn
+2. yarn start
+3. run server: node server.js
+4. run test: yarn test
