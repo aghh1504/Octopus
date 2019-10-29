@@ -1,33 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Products Reducer should store the products into state on the right event 1`] = `
-Immutable.Map {
-  undefined: Immutable.ProductRecord {
-    "id": null,
-    "title": "",
+Array [
+  Immutable.ProductRecord {
+    "id": 1,
+    "title": "Energy saving light bulb",
     "image": Object {
-      "heigth": 0,
+      "heigth": 510,
       "url": "",
-      "width": 0,
+      "width": 435,
     },
-    "details": "",
+    "details": "25W // Packet of 4",
     "price": Object {
-      "amount": 0,
-      "currency": "",
+      "amount": 12.99,
+      "currency": "£",
     },
-    "max_quantity": 0,
-    "description": "",
+    "max_quantity": 10,
+    "description": "Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches on instantly, no wiaint around warm start and flicker free features. Compatible with the Plumen Pendant. Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in B22, bulb switches on instantly, no wiaint around warm start and flicker free features. Compatible with the Plumen Pendant.",
     "specifications": Object {
-      "brand": "",
-      "colour": "",
-      "dimensions": "",
-      "model_number": "",
-      "socket": "",
-      "type": "",
-      "weight": "",
+      "brand": "Philips",
+      "colour": "Cool daylight",
+      "dimensions": "12.6x6.2x6.2cm",
+      "model_number": "E27 ES",
+      "socket": "B22/E27",
+      "type": "LED",
+      "weight": "77g",
     },
     "performance_first": Array [],
     "performance_second": Array [],
   },
-}
+]
 `;

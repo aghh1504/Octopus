@@ -7,9 +7,9 @@ const setOrderAction = {
   }
 };
 
-describe("Order Status Reducer", () => {
+describe("Order Reducer", () => {
   it("should return correctly", () => {
     const result = order(undefined, setOrderAction);
-    expect(result).toEqual("OK");
+    expect(result).toEqual({ quantity: 1, status: "OK" });
   });
 });

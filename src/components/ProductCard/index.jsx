@@ -11,7 +11,7 @@ export default function ProductCard({
   incrementQuantity,
   postOrder,
   order,
-  products: {
+  product: {
     image,
     title,
     details,

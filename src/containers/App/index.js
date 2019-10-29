@@ -23,19 +23,21 @@ class App extends React.Component {
       products,
       order
     } = this.props;
-    const product = products.length > 0 && products.map(product => product);
 
     return (
       <main>
         <GlobalStyle />
         <Header />
-        <ProductCard
-          product={product}
-          postOrder={dispatchPostOrder}
-          order={order}
-          incrementQuantity={dispatchIncrementQuantity}
-          decrementQuantity={dispatchDecrementQuantity}
-        />
+        {products.length > 0 &&
+          products.map(product => (
+            <ProductCard
+              product={product}
+              postOrder={dispatchPostOrder}
+              order={order}
+              incrementQuantity={dispatchIncrementQuantity}
+              decrementQuantity={dispatchDecrementQuantity}
+            />
+          ))}
         <Footer />
       </main>
     );

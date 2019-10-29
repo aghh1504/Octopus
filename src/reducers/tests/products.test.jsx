@@ -32,7 +32,7 @@ const setProductsAction = {
   type: "SET_PRODUCTS_REQUEST",
   payload: {
     data: {
-      entities: { products: productsModel }
+      products: productsModel
     }
   }
 };

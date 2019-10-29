@@ -9,6 +9,7 @@ export default function products(state = initState, action) {
   switch (action.type) {
     case SET_PRODUCTS_REQUEST: {
       const { products } = action.payload.data;
+      console.log(action.payload.data);
       return products.map(product => productFactory(product));
     }
 

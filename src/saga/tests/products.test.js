@@ -19,15 +19,12 @@ describe("fetchProducts", () => {
         type: "SET_PRODUCTS_REQUEST",
         payload: {
           data: {
-            entities: {
-              products: {
-                "1": {
-                  id: "1",
-                  title: "bulb"
-                }
+            products: [
+              {
+                id: "1",
+                title: "bulb"
               }
-            },
-            result: ["1"]
+            ]
           }
         }
       })
