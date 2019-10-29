@@ -31,6 +31,7 @@ class App extends React.Component {
         {products.length > 0 &&
           products.map(product => (
             <ProductCard
+              key={product.id}
               product={product}
               postOrder={dispatchPostOrder}
               order={order}
