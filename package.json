@@ -4,7 +4,7 @@
   "homepage": "https://aghh1504.github.io/Octopus",
   "private": true,
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "chart.js": "^2.9.0",
     "enzyme": "^3.10.0",
